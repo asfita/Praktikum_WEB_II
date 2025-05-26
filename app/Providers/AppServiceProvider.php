@@ -25,7 +25,6 @@ class AppServiceProvider extends ServiceProvider
         if (env('APP_ENV') === 'production'){
             URL::forcesScheme('https');
         }
-        
         Gate::define("view-student", function (User $user) {
             if ($user->role === "admin" || $user->role === "guest") {
                 return true;
