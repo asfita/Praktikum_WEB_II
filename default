@@ -19,7 +19,6 @@ server {
     location = /50x.html {
         root   /html/;
     }
-    
     # Disable .git directory
     location ~ /\.git {
         deny all;
